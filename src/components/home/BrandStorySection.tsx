@@ -4,14 +4,14 @@ import { Heart } from "lucide-react";
 
 export function BrandStorySection() {
   return (
-    <section className="py-16 sm:py-24 bg-cream">
+    <section className="py-12 sm:py-20 lg:py-24 bg-cream">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-gold-50 border border-gold-200 text-gold-700 text-xs font-semibold uppercase tracking-wider mb-6">
+        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-gold-50 border border-gold-200 text-gold-700 text-xs font-semibold uppercase tracking-wider mb-5">
           <Heart className="w-3.5 h-3.5 text-burgundy fill-burgundy/20" />
           <span>Our Philosophy</span>
         </div>
 
-        <h2 className="font-serif text-3xl sm:text-4xl font-bold text-charcoal">
+        <h2 className="font-serif text-2xl sm:text-3xl lg:text-4xl font-bold text-charcoal">
           Every Gift Tells a Story
         </h2>
 

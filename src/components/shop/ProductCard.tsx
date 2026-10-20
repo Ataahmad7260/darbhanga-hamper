@@ -55,7 +55,7 @@ export function ProductCard({ product }: ProductCardProps) {
       </Link>
 
       {/* Product Content */}
-      <div className="p-5 sm:p-6 flex-1 flex flex-col justify-between">
+      <div className="p-4 sm:p-6 flex-1 flex flex-col justify-between">
         <div>
           <Link
             href={`/products/${product.slug}`}
@@ -68,14 +68,14 @@ export function ProductCard({ product }: ProductCardProps) {
           </p>
 
           {/* Included items count badge */}
-          <div className="mt-3 flex items-center gap-1.5 text-xs text-gold-700 font-medium">
-            <Sparkles className="w-3.5 h-3.5 text-gold" />
-            <span>{product.includedItems.length} curated items + custom card</span>
+          <div className="mt-2.5 sm:mt-3 flex items-center gap-1.5 text-[11px] sm:text-xs text-gold-700 font-medium">
+            <Sparkles className="w-3.5 h-3.5 text-gold shrink-0" />
+            <span className="truncate">{product.includedItems.length} curated items + custom card</span>
           </div>
         </div>
 
         {/* Price & Action Row */}
-        <div className="mt-5 pt-4 border-t border-cream-200">
+        <div className="mt-4 sm:mt-5 pt-3.5 sm:pt-4 border-t border-cream-200">
           <div className="flex items-baseline justify-between mb-3">
             <div>
               <span className="text-[10px] uppercase tracking-wider text-charcoal/60 block font-semibold">
@@ -101,29 +101,30 @@ export function ProductCard({ product }: ProductCardProps) {
               type="button"
               onClick={handleQuickWhatsAppBuy}
               title="Order directly on WhatsApp"
-              className="flex items-center justify-center gap-1.5 py-2.5 px-3 bg-emerald-700 hover:bg-emerald-800 text-white text-xs font-bold rounded-xl transition-all shadow-xs active:scale-95"
+              className="flex items-center justify-center gap-1.5 py-2.5 px-2 sm:px-3 bg-emerald-700 hover:bg-emerald-800 text-white text-xs font-bold rounded-xl transition-all shadow-xs active:scale-95"
             >
-              <MessageCircle className="w-3.5 h-3.5" />
-              <span>Buy</span>
+              <MessageCircle className="w-3.5 h-3.5 shrink-0" />
+              <span>Buy Now</span>
             </button>
 
             <button
               type="button"
               onClick={handleQuickAdd}
               aria-label={`Add ${product.name} to cart`}
-              className={`flex items-center justify-center gap-1.5 py-2.5 px-3 text-xs font-semibold rounded-xl transition-all shadow-xs active:scale-95 ${justAdded
+              className={`flex items-center justify-center gap-1.5 py-2.5 px-2 sm:px-3 text-xs font-semibold rounded-xl transition-all shadow-xs active:scale-95 ${
+                justAdded
                   ? "bg-burgundy text-cream"
                   : "bg-cream-100 hover:bg-cream-200/90 text-charcoal border border-cream-300"
-                }`}
+              }`}
             >
               {justAdded ? (
                 <>
-                  <Check className="w-3.5 h-3.5" />
+                  <Check className="w-3.5 h-3.5 shrink-0" />
                   <span>Added</span>
                 </>
               ) : (
                 <>
-                  <ShoppingBag className="w-3.5 h-3.5" />
+                  <ShoppingBag className="w-3.5 h-3.5 shrink-0" />
                   <span>Add to Bag</span>
                 </>
               )}

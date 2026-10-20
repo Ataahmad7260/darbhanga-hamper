@@ -45,22 +45,22 @@ export function FAQSection() {
   };
 
   return (
-    <section className="py-16 sm:py-24 bg-cream-50 border-t border-cream-200">
+    <section className="py-12 sm:py-20 lg:py-24 bg-cream-50 border-t border-cream-200">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-14">
+        <div className="text-center mb-10 sm:mb-14">
           <div className="inline-flex items-center gap-1.5 text-xs uppercase tracking-widest font-semibold text-gold font-sans">
             <HelpCircle className="w-3.5 h-3.5" />
             <span>Got Questions?</span>
           </div>
-          <h2 className="mt-2 font-serif text-3xl sm:text-4xl font-bold text-charcoal">
+          <h2 className="mt-1 sm:mt-2 font-serif text-2xl sm:text-3xl lg:text-4xl font-bold text-charcoal">
             Frequently Asked Questions
           </h2>
-          <p className="mt-3 text-sm sm:text-base text-charcoal/70">
+          <p className="mt-2 text-xs sm:text-sm lg:text-base text-charcoal/70">
             Everything you need to know about ordering, delivery, and personalizing with {siteConfig.businessName}.
           </p>
         </div>
 
-        <div className="space-y-4">
+        <div className="space-y-3 sm:space-y-4">
           {faqs.map((faq, idx) => {
             const isOpen = openIndex === idx;
             return (
@@ -72,20 +72,20 @@ export function FAQSection() {
                   type="button"
                   onClick={() => toggle(idx)}
                   aria-expanded={isOpen}
-                  className="w-full py-4 px-6 text-left flex items-center justify-between gap-4 hover:bg-cream-50/50 transition-colors focus-visible:outline-burgundy"
+                  className="w-full py-3.5 px-4 sm:py-4 sm:px-6 text-left flex items-center justify-between gap-3 hover:bg-cream-50/50 transition-colors focus-visible:outline-burgundy active:bg-cream-100/50"
                 >
-                  <span className="font-serif text-base sm:text-lg font-semibold text-charcoal">
+                  <span className="font-serif text-sm sm:text-base lg:text-lg font-semibold text-charcoal">
                     {faq.question}
                   </span>
                   <ChevronDown
-                    className={`w-5 h-5 text-burgundy transition-transform duration-200 shrink-0 ${
+                    className={`w-4 h-4 sm:w-5 sm:h-5 text-burgundy transition-transform duration-200 shrink-0 ${
                       isOpen ? "transform rotate-180" : ""
                     }`}
                   />
                 </button>
 
                 {isOpen && (
-                  <div className="px-6 pb-5 pt-1 text-sm text-charcoal/75 leading-relaxed border-t border-cream-100">
+                  <div className="px-4 sm:px-6 pb-4 sm:pb-5 pt-1 text-xs sm:text-sm text-charcoal/75 leading-relaxed border-t border-cream-100">
                     <p>{faq.answer}</p>
                   </div>
                 )}
