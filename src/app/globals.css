@@ -1,0 +1,70 @@
+@import "tailwindcss";
+
+@theme {
+  --color-burgundy: #722F37;
+  --color-burgundy-50: #FAF0F1;
+  --color-burgundy-100: #F4DFE1;
+  --color-burgundy-200: #E6BFC3;
+  --color-burgundy-300: #D498A0;
+  --color-burgundy-600: #8C3943;
+  --color-burgundy-700: #722F37;
+  --color-burgundy-800: #58242A;
+  --color-burgundy-900: #3E181D;
+
+  --color-cream: #FAF3EF;
+  --color-cream-50: #FDFBF9;
+  --color-cream-100: #FAF3EF;
+  --color-cream-200: #F2E4DC;
+  --color-cream-300: #E6D0C3;
+
+  --color-gold: #C5A46D;
+  --color-gold-50: #FAF7F2;
+  --color-gold-100: #F4ECE0;
+  --color-gold-400: #D6B986;
+  --color-gold-500: #C5A46D;
+  --color-gold-600: #AA874C;
+  --color-gold-700: #8A6B38;
+
+  --color-charcoal: #292525;
+  --color-charcoal-50: #F7F6F6;
+  --color-charcoal-100: #EFECEC;
+  --color-charcoal-500: #6B6262;
+  --color-charcoal-700: #3F3939;
+  --color-charcoal-900: #292525;
+
+  --font-serif: var(--font-playfair), Georgia, serif;
+  --font-sans: var(--font-jakarta), system-ui, -apple-system, sans-serif;
+}
+
+:root {
+  --background: #FAF3EF;
+  --foreground: #292525;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #FAF3EF;
+}
+::-webkit-scrollbar-thumb {
+  background: #D498A0;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #722F37;
+}
+
+/* Focus styles for accessibility */
+:focus-visible {
+  outline: 2px solid #722F37;
+  outline-offset: 2px;
+}
